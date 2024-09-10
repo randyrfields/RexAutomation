@@ -1,0 +1,3 @@
+# RexAutomation
+
+Odroid application
