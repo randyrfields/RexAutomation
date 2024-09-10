@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+	<head>
+		<title>Dashboard</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href={% static 'css/layout.css' %} rel="stylesheet">
+    <link href={% static 'css/dashboard.css' %} rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div id="app-header">
+      <div id="app-header-logo"><img src="{% static 'images/Rexair.png' %}" alt="Rexair LLC"><i class="bi bi-list"></i></div>
+      <div id="app-header-options">
+        <ul>
+          <li><button class="btn btn-primary" type="button" onClick="do_scan()"><i class="bi bi-search"></i> Scan</button></li>
+          <script>
+          function do_scan(){
+            fetch("call-script", {method:'GET'})
+            .then((data)=>{
+              console.log(data.text)
+            })
+          }
+          </script>
+          <li><button class="btn btn-primary" type="button"><i class="bi bi-person-plus-fill"></i> New Config</button></li>
+          <li>
+            <select class="form-select" aria-label="Select your location">
+              <option selected>Cleaner Top</option>
+              <option value="1">Canister</option>
+              <option value="2">Vacuum Head</option>
+              <option value="3">Power Cord</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+      <div id="app-header-timezone">
+        <p><i class="bi bi-alarm"></i>EDT-04</p>
+      </div>
+      <div id="app-header-divider"></div>
+      <div id="app-header-account">
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img>
+            <span class="user-name">Randy Fields</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="profile.html">My Profile</a></li>
+            <li><a class="dropdown-item" href="sign_in.html">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+		<div id="app-left-content">
+      <ul>
+        <li class="active"><a href="dashboard.html"><i class="bi bi-speedometer2"></i><br>Dashboard</a></li>
+        <li><a href="location.html"><i class="bi bi-building"></i><br>Stations</a></li>
+        <li><a href="users.html"><i class="bi bi-people-fill"></i><br>Operators</a></li>
+        <li><a href="reports.html"><i class="bi bi-bar-chart-fill"></i><br>Reports</a></li>
+        <li><a href="documents.html"><i class="bi bi-file-text"></i><br>Documents</a></li>
+        <li><a href="templates.html"><i class="bi bi-tablet"></i><br>Instructions</a></li>
+        <li><a href="#"><i class="bi bi-question-lg"></i><br>Help</a></li>
+      </ul>
+    </div>
+    <div id="app-right-content">
+      <div id="dashboard-container">
+        <div id="dashboard-options">
+          <ul>
+            <li><button type="button" class="btn"><i class="bi bi-megaphone"></i><br>Announcement</li>
+            <li><button type="button" class="btn"><i class="bi bi-eye-slash"></i><br>Hide Widgets</li>
+          </ul>
+        </div>
+        <div id="dashboard-widgets" class="container-fluid">
+          <div class="row">
+            <div class="col">
+              <ul>
+                <li><i class="bi bi-people-fill current-visitors"></i></li>
+                <li>Current Widgets</li>
+                <li class="current-visitors">123456</li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul>
+                <li><i class="bi bi-calendar monthly-visitors"></i></li>
+                <li>This Month's Widgets</li>
+                <li class="monthly-visitors">123456</li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul>
+                <li><i class="bi bi-bar-chart-line-fill average-visitors"></i></li>
+                <li>Month's Daily Avg. Widgets</li>
+                <li class="average-visitors">12345</li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul>
+                <li><i class="bi bi-calendar last-months-visitors"></i></li>
+                <li>Last Month's Widgets</li>
+                <li class="last-months-visitors">123456</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="dashboard-table">
+          <div id="dashboard-table-top" class="row">
+            <div class="col"><input class="form-control" type="text" name="search" placeholder="Start typing to filter..."></div>
+            <div class="col">&lt;&lt; August 25, 2024 &gt;&gt;</div>
+            <div class="col">
+              <ul>
+                <li><button class="btn" type="button"><i class="bi bi-filter"></i></button></li>
+                <li><button class="btn" type="button"><i class="bi bi-columns"></i></button></li>
+                <li><button class="btn" type="button"><i class="bi bi-download"></i></button></li>
+              </ul>
+            </div>
+          </div>
+          <div id="dashboard-table-headers"></div>
+          <div id="scan_results" class="text-center" style="height: 10px;"><a href="visit.html" class="text-primary">View Summary Page</a></div>
+            <script>
+              document.getElementById('scan_results').innerHTML='<b>oh hai</b>';
+            </script>
+        </div>
+      </div>
+      <div id="app-footer"><img src="{% static 'images/Rexair.png' %}" alt="Powered by Rexair Automation"></div>
+    </div>
+	</body>
+</html>
