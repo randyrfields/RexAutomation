@@ -1,5 +1,6 @@
 import serial
 import time
+import unicodedata
 from cobs import cobs
 
 
@@ -10,14 +11,16 @@ def ScanBus():
     baudrate = 115200
     timeout = 1
   
-    ser = serial.Serial(port, baudrate, timeout=timeout)
+    # ser = serial.Serial(port, baudrate, timeout=timeout)
 
-    encoded = cobs.encode("RX:SCANBUS.")
+    unicode_string = "RX:SCANBUS."
+    utfvalue = unicode_string.encode('utf-8')
+    encoded = cobs.encode(utfvalue)
     port.write(encoded)
     port.write(b'\x00')
     time.sleep(1)
-    response = port.readline()
-    # response = 37373
+    # response = port.readline()
+    response = 37373
 
     print("Made it here")
 
