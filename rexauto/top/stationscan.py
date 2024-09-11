@@ -24,3 +24,10 @@ def ScanBus():
     
     return response
 
+
+def main():
+    ScanBus()
+
+if __name__=="__main__":
+    main()
+
