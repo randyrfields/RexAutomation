@@ -11,7 +11,7 @@ def ScanBus():
     baudrate = 115200
     timeout = 1
   
-    # ser = serial.Serial(port, baudrate, timeout=timeout)
+    ser = serial.Serial(port, baudrate, timeout=timeout)
 
     unicode_string = "RX:SCANBUS."
     utfvalue = unicode_string.encode('utf-8')
