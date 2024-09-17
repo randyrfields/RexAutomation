@@ -2,12 +2,8 @@ import serial
 import time
 import unicodedata
 from cobs import cobs
-from channels.generic.websocket import AsyncWebSocketConsumer
+from channels.generic.websocket import AsyncWebsocketConsumer
 import json
-
-class DataConsumer(AsyncWebsocketConsumer):
-    
-
 
 
 def ScanBus():
