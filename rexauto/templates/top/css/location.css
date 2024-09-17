@@ -1,0 +1,19 @@
+.location-details {
+  background-color: white;
+  border: 2px solid rgb(220, 232, 245);
+  min-height: 500px;
+  padding: 8px;
+  width: 100%;
+}
+
+h1 a {
+  text-decoration: none;
+}
+
+.nav-item {
+  font-size: 18px;
+}
+
+ul.nav {
+  border-bottom: 0;
+}

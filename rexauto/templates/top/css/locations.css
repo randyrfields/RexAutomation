@@ -1,0 +1,119 @@
+#business-summary {
+  background-color: white;
+  border: 2px solid rgb(220, 232, 245);
+  padding: 20px;
+  width: 100%;
+}
+
+#business-summary th[scope="col"] {
+  font-size: 22px;
+}
+
+#locations-table {
+  background-color: white;
+  border: 2px solid rgb(220, 232, 245);
+  margin-top: 16px;
+  min-height: 500px;
+  width: 100%;
+}
+
+#locations-table-top {
+  height: 50px;
+  margin-left: 0;
+  width: 100%;
+}
+
+#locations-table-top .col {
+  text-align: center;
+  padding: 0;
+}
+
+#locations-table-top input[type="text"] {
+  margin-top: 6px;
+  margin-left: 6px;
+  width: 250px;
+}
+
+#locations-table-top button {
+  margin-top: 6px;
+  margin-right: 6px;
+}
+
+#locations-table-headers {
+  background-color: #efefef;
+  height: 65px;
+  width: 100%;
+}
+
+#dashboard-widgets {
+  height: 100px;
+  margin-top: 16px;
+  width: 100%;
+}
+
+#dashboard-widgets .row {
+  height: 100%;
+}
+
+#dashboard-widgets .row .col {
+  background-color: white;
+  border: 2px solid rgb(220, 232, 245);
+  height: 100%;
+  margin-right: 16px;
+}
+
+#dashboard-widgets .row .col:last-child {
+  margin-right: 0;
+}
+
+#dashboard-widgets .row .col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#dashboard-widgets .row .col ul li i {
+  /*font-size: 42px;*/
+  font-size: 2vw;
+}
+
+#dashboard-widgets .row .col ul li {
+  color: slategray;
+  float: left;
+  /*font-size: 16px;*/
+  font-size: 1vw;
+  line-height: 48px;
+  margin-top: 22px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+#dashboard-widgets .row .col ul li:last-child {
+  float: right;
+  /*font-size: 28px;*/
+  font-size: 1.5vw;
+  margin-right: 0;
+}
+
+#dashboard-widgets .current-visitors {
+  color: rgb(13,110,253) !important;
+}
+
+#dashboard-widgets .monthly-visitors {
+  color: rgb(13,110,253) !important;
+}
+
+#dashboard-widgets .average-visitors {
+  color: rgb(0, 221, 48) !important;
+}
+
+#dashboard-widgets .last-months-visitors {
+  color: rgb(13,110,253) !important;
+}
+
+.pic {
+  border: 1px solid lightgray;
+  background-color: rgb(232, 239, 247);
+  height: 100%;
+  width: 100%;
+}

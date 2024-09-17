@@ -1,0 +1,33 @@
+#reports-runner {
+  background-color: white;
+  border: 2px solid rgb(220, 232, 245);
+  margin-top: 5px;
+  padding: 10px;
+  height: 62px;
+  width: 100%;
+}
+
+#reports-header ul {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#reports-header li {
+  float: left;
+  margin-left: 10px;
+}
+
+#reports-header li button {
+  padding: 5px;
+}
+
+#reports-header li i {
+  color: slategray;
+  font-size: 22px;
+}
+
+#reports-header ul::after {
+  clear: both;
+}

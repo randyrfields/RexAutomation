@@ -2,6 +2,11 @@ import serial
 import time
 import unicodedata
 from cobs import cobs
+from channels.generic.websocket import AsyncWebSocketConsumer
+import json
+
+class DataConsumer(AsyncWebsocketConsumer):
+    
 
 
 
